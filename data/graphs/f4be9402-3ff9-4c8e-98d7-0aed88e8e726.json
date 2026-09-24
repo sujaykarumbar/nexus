@@ -1,0 +1,419 @@
+{
+  "project_id": "f4be9402-3ff9-4c8e-98d7-0aed88e8e726",
+  "nodes": [
+    {
+      "id": "ds_53c05e1e-6d17-4d1c-afb1-20bf35ac91f8",
+      "name": "Customer Churn Intelligence Dataset",
+      "node_type": "dataset",
+      "properties": {
+        "dataset_id": "53c05e1e-6d17-4d1c-afb1-20bf35ac91f8",
+        "row_count": 20,
+        "column_count": 10,
+        "columns": [
+          "customer_id",
+          "age",
+          "tenure_months",
+          "monthly_charges",
+          "total_charges",
+          "contract_type",
+          "tech_support",
+          "payment_method",
+          "num_tickets",
+          "churn"
+        ]
+      },
+      "project_id": "f4be9402-3ff9-4c8e-98d7-0aed88e8e726"
+    },
+    {
+      "id": "col_53c05e1e-6d17-4d1c-afb1-20bf35ac91f8_customer_id",
+      "name": "customer_id",
+      "node_type": "column",
+      "properties": {
+        "column_name": "customer_id",
+        "dataset_id": "53c05e1e-6d17-4d1c-afb1-20bf35ac91f8",
+        "inferred_type": "IDENTIFIER",
+        "data_type": "object",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 20
+      },
+      "project_id": "f4be9402-3ff9-4c8e-98d7-0aed88e8e726"
+    },
+    {
+      "id": "col_53c05e1e-6d17-4d1c-afb1-20bf35ac91f8_age",
+      "name": "age",
+      "node_type": "column",
+      "properties": {
+        "column_name": "age",
+        "dataset_id": "53c05e1e-6d17-4d1c-afb1-20bf35ac91f8",
+        "inferred_type": "NUMERICAL",
+        "data_type": "object",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 20
+      },
+      "project_id": "f4be9402-3ff9-4c8e-98d7-0aed88e8e726"
+    },
+    {
+      "id": "col_53c05e1e-6d17-4d1c-afb1-20bf35ac91f8_tenure_months",
+      "name": "tenure_months",
+      "node_type": "column",
+      "properties": {
+        "column_name": "tenure_months",
+        "dataset_id": "53c05e1e-6d17-4d1c-afb1-20bf35ac91f8",
+        "inferred_type": "NUMERICAL",
+        "data_type": "object",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 20
+      },
+      "project_id": "f4be9402-3ff9-4c8e-98d7-0aed88e8e726"
+    },
+    {
+      "id": "col_53c05e1e-6d17-4d1c-afb1-20bf35ac91f8_monthly_charges",
+      "name": "monthly_charges",
+      "node_type": "column",
+      "properties": {
+        "column_name": "monthly_charges",
+        "dataset_id": "53c05e1e-6d17-4d1c-afb1-20bf35ac91f8",
+        "inferred_type": "NUMERICAL",
+        "data_type": "object",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 20
+      },
+      "project_id": "f4be9402-3ff9-4c8e-98d7-0aed88e8e726"
+    },
+    {
+      "id": "col_53c05e1e-6d17-4d1c-afb1-20bf35ac91f8_total_charges",
+      "name": "total_charges",
+      "node_type": "column",
+      "properties": {
+        "column_name": "total_charges",
+        "dataset_id": "53c05e1e-6d17-4d1c-afb1-20bf35ac91f8",
+        "inferred_type": "NUMERICAL",
+        "data_type": "object",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 20
+      },
+      "project_id": "f4be9402-3ff9-4c8e-98d7-0aed88e8e726"
+    },
+    {
+      "id": "col_53c05e1e-6d17-4d1c-afb1-20bf35ac91f8_contract_type",
+      "name": "contract_type",
+      "node_type": "column",
+      "properties": {
+        "column_name": "contract_type",
+        "dataset_id": "53c05e1e-6d17-4d1c-afb1-20bf35ac91f8",
+        "inferred_type": "CATEGORICAL",
+        "data_type": "object",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 3
+      },
+      "project_id": "f4be9402-3ff9-4c8e-98d7-0aed88e8e726"
+    },
+    {
+      "id": "col_53c05e1e-6d17-4d1c-afb1-20bf35ac91f8_tech_support",
+      "name": "tech_support",
+      "node_type": "column",
+      "properties": {
+        "column_name": "tech_support",
+        "dataset_id": "53c05e1e-6d17-4d1c-afb1-20bf35ac91f8",
+        "inferred_type": "BOOLEAN",
+        "data_type": "object",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 2
+      },
+      "project_id": "f4be9402-3ff9-4c8e-98d7-0aed88e8e726"
+    },
+    {
+      "id": "col_53c05e1e-6d17-4d1c-afb1-20bf35ac91f8_payment_method",
+      "name": "payment_method",
+      "node_type": "column",
+      "properties": {
+        "column_name": "payment_method",
+        "dataset_id": "53c05e1e-6d17-4d1c-afb1-20bf35ac91f8",
+        "inferred_type": "CATEGORICAL",
+        "data_type": "object",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 3
+      },
+      "project_id": "f4be9402-3ff9-4c8e-98d7-0aed88e8e726"
+    },
+    {
+      "id": "col_53c05e1e-6d17-4d1c-afb1-20bf35ac91f8_num_tickets",
+      "name": "num_tickets",
+      "node_type": "column",
+      "properties": {
+        "column_name": "num_tickets",
+        "dataset_id": "53c05e1e-6d17-4d1c-afb1-20bf35ac91f8",
+        "inferred_type": "NUMERICAL",
+        "data_type": "object",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 7
+      },
+      "project_id": "f4be9402-3ff9-4c8e-98d7-0aed88e8e726"
+    },
+    {
+      "id": "col_53c05e1e-6d17-4d1c-afb1-20bf35ac91f8_churn",
+      "name": "churn",
+      "node_type": "column",
+      "properties": {
+        "column_name": "churn",
+        "dataset_id": "53c05e1e-6d17-4d1c-afb1-20bf35ac91f8",
+        "inferred_type": "BOOLEAN",
+        "data_type": "object",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 2
+      },
+      "project_id": "f4be9402-3ff9-4c8e-98d7-0aed88e8e726"
+    },
+    {
+      "id": "prob_53c05e1e-6d17-4d1c-afb1-20bf35ac91f8_churn",
+      "name": "Binary Classification: churn",
+      "node_type": "problem",
+      "properties": {
+        "problem_type": "binary_classification",
+        "target_column": "churn",
+        "dataset_id": "53c05e1e-6d17-4d1c-afb1-20bf35ac91f8"
+      },
+      "project_id": "f4be9402-3ff9-4c8e-98d7-0aed88e8e726"
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge_has_col_53c05e1e-6d17-4d1c-afb1-20bf35ac91f8_customer_id",
+      "source_id": "ds_53c05e1e-6d17-4d1c-afb1-20bf35ac91f8",
+      "target_id": "col_53c05e1e-6d17-4d1c-afb1-20bf35ac91f8_customer_id",
+      "relation": "HAS_COLUMN",
+      "weight": 1.0,
+      "properties": {
+        "column_name": "customer_id"
+      }
+    },
+    {
+      "id": "edge_has_col_53c05e1e-6d17-4d1c-afb1-20bf35ac91f8_age",
+      "source_id": "ds_53c05e1e-6d17-4d1c-afb1-20bf35ac91f8",
+      "target_id": "col_53c05e1e-6d17-4d1c-afb1-20bf35ac91f8_age",
+      "relation": "HAS_COLUMN",
+      "weight": 1.0,
+      "properties": {
+        "column_name": "age"
+      }
+    },
+    {
+      "id": "edge_has_col_53c05e1e-6d17-4d1c-afb1-20bf35ac91f8_tenure_months",
+      "source_id": "ds_53c05e1e-6d17-4d1c-afb1-20bf35ac91f8",
+      "target_id": "col_53c05e1e-6d17-4d1c-afb1-20bf35ac91f8_tenure_months",
+      "relation": "HAS_COLUMN",
+      "weight": 1.0,
+      "properties": {
+        "column_name": "tenure_months"
+      }
+    },
+    {
+      "id": "edge_has_col_53c05e1e-6d17-4d1c-afb1-20bf35ac91f8_monthly_charges",
+      "source_id": "ds_53c05e1e-6d17-4d1c-afb1-20bf35ac91f8",
+      "target_id": "col_53c05e1e-6d17-4d1c-afb1-20bf35ac91f8_monthly_charges",
+      "relation": "HAS_COLUMN",
+      "weight": 1.0,
+      "properties": {
+        "column_name": "monthly_charges"
+      }
+    },
+    {
+      "id": "edge_has_col_53c05e1e-6d17-4d1c-afb1-20bf35ac91f8_total_charges",
+      "source_id": "ds_53c05e1e-6d17-4d1c-afb1-20bf35ac91f8",
+      "target_id": "col_53c05e1e-6d17-4d1c-afb1-20bf35ac91f8_total_charges",
+      "relation": "HAS_COLUMN",
+      "weight": 1.0,
+      "properties": {
+        "column_name": "total_charges"
+      }
+    },
+    {
+      "id": "edge_has_col_53c05e1e-6d17-4d1c-afb1-20bf35ac91f8_contract_type",
+      "source_id": "ds_53c05e1e-6d17-4d1c-afb1-20bf35ac91f8",
+      "target_id": "col_53c05e1e-6d17-4d1c-afb1-20bf35ac91f8_contract_type",
+      "relation": "HAS_COLUMN",
+      "weight": 1.0,
+      "properties": {
+        "column_name": "contract_type"
+      }
+    },
+    {
+      "id": "edge_has_col_53c05e1e-6d17-4d1c-afb1-20bf35ac91f8_tech_support",
+      "source_id": "ds_53c05e1e-6d17-4d1c-afb1-20bf35ac91f8",
+      "target_id": "col_53c05e1e-6d17-4d1c-afb1-20bf35ac91f8_tech_support",
+      "relation": "HAS_COLUMN",
+      "weight": 1.0,
+      "properties": {
+        "column_name": "tech_support"
+      }
+    },
+    {
+      "id": "edge_has_col_53c05e1e-6d17-4d1c-afb1-20bf35ac91f8_payment_method",
+      "source_id": "ds_53c05e1e-6d17-4d1c-afb1-20bf35ac91f8",
+      "target_id": "col_53c05e1e-6d17-4d1c-afb1-20bf35ac91f8_payment_method",
+      "relation": "HAS_COLUMN",
+      "weight": 1.0,
+      "properties": {
+        "column_name": "payment_method"
+      }
+    },
+    {
+      "id": "edge_has_col_53c05e1e-6d17-4d1c-afb1-20bf35ac91f8_num_tickets",
+      "source_id": "ds_53c05e1e-6d17-4d1c-afb1-20bf35ac91f8",
+      "target_id": "col_53c05e1e-6d17-4d1c-afb1-20bf35ac91f8_num_tickets",
+      "relation": "HAS_COLUMN",
+      "weight": 1.0,
+      "properties": {
+        "column_name": "num_tickets"
+      }
+    },
+    {
+      "id": "edge_has_col_53c05e1e-6d17-4d1c-afb1-20bf35ac91f8_churn",
+      "source_id": "ds_53c05e1e-6d17-4d1c-afb1-20bf35ac91f8",
+      "target_id": "col_53c05e1e-6d17-4d1c-afb1-20bf35ac91f8_churn",
+      "relation": "HAS_COLUMN",
+      "weight": 1.0,
+      "properties": {
+        "column_name": "churn"
+      }
+    },
+    {
+      "id": "edge_corr_53c05e1e-6d17-4d1c-afb1-20bf35ac91f8_age_monthly_charges",
+      "source_id": "col_53c05e1e-6d17-4d1c-afb1-20bf35ac91f8_age",
+      "target_id": "col_53c05e1e-6d17-4d1c-afb1-20bf35ac91f8_monthly_charges",
+      "relation": "CORRELATES_WITH",
+      "weight": 0.669,
+      "properties": {
+        "correlation_r": 0.669,
+        "strength": "moderate"
+      }
+    },
+    {
+      "id": "edge_corr_53c05e1e-6d17-4d1c-afb1-20bf35ac91f8_age_num_tickets",
+      "source_id": "col_53c05e1e-6d17-4d1c-afb1-20bf35ac91f8_age",
+      "target_id": "col_53c05e1e-6d17-4d1c-afb1-20bf35ac91f8_num_tickets",
+      "relation": "CORRELATES_WITH",
+      "weight": 0.425,
+      "properties": {
+        "correlation_r": 0.425,
+        "strength": "moderate"
+      }
+    },
+    {
+      "id": "edge_corr_53c05e1e-6d17-4d1c-afb1-20bf35ac91f8_age_churn",
+      "source_id": "col_53c05e1e-6d17-4d1c-afb1-20bf35ac91f8_age",
+      "target_id": "col_53c05e1e-6d17-4d1c-afb1-20bf35ac91f8_churn",
+      "relation": "CORRELATES_WITH",
+      "weight": 0.381,
+      "properties": {
+        "correlation_r": 0.381,
+        "strength": "weak"
+      }
+    },
+    {
+      "id": "edge_corr_53c05e1e-6d17-4d1c-afb1-20bf35ac91f8_tenure_months_total_charges",
+      "source_id": "col_53c05e1e-6d17-4d1c-afb1-20bf35ac91f8_tenure_months",
+      "target_id": "col_53c05e1e-6d17-4d1c-afb1-20bf35ac91f8_total_charges",
+      "relation": "CORRELATES_WITH",
+      "weight": 0.888,
+      "properties": {
+        "correlation_r": 0.888,
+        "strength": "strong"
+      }
+    },
+    {
+      "id": "edge_corr_53c05e1e-6d17-4d1c-afb1-20bf35ac91f8_num_tickets_tenure_months",
+      "source_id": "col_53c05e1e-6d17-4d1c-afb1-20bf35ac91f8_num_tickets",
+      "target_id": "col_53c05e1e-6d17-4d1c-afb1-20bf35ac91f8_tenure_months",
+      "relation": "CORRELATES_WITH",
+      "weight": 0.773,
+      "properties": {
+        "correlation_r": -0.773,
+        "strength": "strong"
+      }
+    },
+    {
+      "id": "edge_corr_53c05e1e-6d17-4d1c-afb1-20bf35ac91f8_churn_tenure_months",
+      "source_id": "col_53c05e1e-6d17-4d1c-afb1-20bf35ac91f8_churn",
+      "target_id": "col_53c05e1e-6d17-4d1c-afb1-20bf35ac91f8_tenure_months",
+      "relation": "CORRELATES_WITH",
+      "weight": 0.755,
+      "properties": {
+        "correlation_r": -0.755,
+        "strength": "strong"
+      }
+    },
+    {
+      "id": "edge_corr_53c05e1e-6d17-4d1c-afb1-20bf35ac91f8_monthly_charges_total_charges",
+      "source_id": "col_53c05e1e-6d17-4d1c-afb1-20bf35ac91f8_monthly_charges",
+      "target_id": "col_53c05e1e-6d17-4d1c-afb1-20bf35ac91f8_total_charges",
+      "relation": "CORRELATES_WITH",
+      "weight": 0.532,
+      "properties": {
+        "correlation_r": 0.532,
+        "strength": "moderate"
+      }
+    },
+    {
+      "id": "edge_corr_53c05e1e-6d17-4d1c-afb1-20bf35ac91f8_num_tickets_total_charges",
+      "source_id": "col_53c05e1e-6d17-4d1c-afb1-20bf35ac91f8_num_tickets",
+      "target_id": "col_53c05e1e-6d17-4d1c-afb1-20bf35ac91f8_total_charges",
+      "relation": "CORRELATES_WITH",
+      "weight": 0.568,
+      "properties": {
+        "correlation_r": -0.568,
+        "strength": "moderate"
+      }
+    },
+    {
+      "id": "edge_corr_53c05e1e-6d17-4d1c-afb1-20bf35ac91f8_churn_total_charges",
+      "source_id": "col_53c05e1e-6d17-4d1c-afb1-20bf35ac91f8_churn",
+      "target_id": "col_53c05e1e-6d17-4d1c-afb1-20bf35ac91f8_total_charges",
+      "relation": "CORRELATES_WITH",
+      "weight": 0.568,
+      "properties": {
+        "correlation_r": -0.568,
+        "strength": "moderate"
+      }
+    },
+    {
+      "id": "edge_corr_53c05e1e-6d17-4d1c-afb1-20bf35ac91f8_churn_num_tickets",
+      "source_id": "col_53c05e1e-6d17-4d1c-afb1-20bf35ac91f8_churn",
+      "target_id": "col_53c05e1e-6d17-4d1c-afb1-20bf35ac91f8_num_tickets",
+      "relation": "CORRELATES_WITH",
+      "weight": 0.876,
+      "properties": {
+        "correlation_r": 0.876,
+        "strength": "strong"
+      }
+    },
+    {
+      "id": "edge_target_53c05e1e-6d17-4d1c-afb1-20bf35ac91f8_churn",
+      "source_id": "col_53c05e1e-6d17-4d1c-afb1-20bf35ac91f8_churn",
+      "target_id": "prob_53c05e1e-6d17-4d1c-afb1-20bf35ac91f8_churn",
+      "relation": "TARGET_OF",
+      "weight": 1.0,
+      "properties": {
+        "target_column": "churn"
+      }
+    },
+    {
+      "id": "edge_prob_ds_53c05e1e-6d17-4d1c-afb1-20bf35ac91f8_churn",
+      "source_id": "prob_53c05e1e-6d17-4d1c-afb1-20bf35ac91f8_churn",
+      "target_id": "ds_53c05e1e-6d17-4d1c-afb1-20bf35ac91f8",
+      "relation": "BELONGS_TO",
+      "weight": 1.0,
+      "properties": {}
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+user_id,feature_a,feature_b,target
+1,10.5,20.2,1
+2,12.1,19.8,0
+3,9.4,22.0,1

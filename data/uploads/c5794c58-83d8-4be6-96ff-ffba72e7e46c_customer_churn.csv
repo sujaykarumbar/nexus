@@ -1,0 +1,21 @@
+customer_id,age,tenure_months,monthly_charges,total_charges,contract_type,tech_support,payment_method,num_tickets,churn
+CUST-1001,42,12,79.85,958.20,Month-to-Month,No,Electronic Check,3,1
+CUST-1002,31,34,55.10,1873.40,One Year,Yes,Credit Card,0,0
+CUST-1003,58,2,98.50,197.00,Month-to-Month,No,Electronic Check,5,1
+CUST-1004,26,48,20.05,962.40,Two Year,No,Bank Transfer,0,0
+CUST-1005,65,8,84.60,676.80,Month-to-Month,No,Electronic Check,4,1
+CUST-1006,38,60,110.20,6612.00,Two Year,Yes,Credit Card,1,0
+CUST-1007,45,24,65.30,1567.20,One Year,Yes,Bank Transfer,1,0
+CUST-1008,52,5,91.20,456.00,Month-to-Month,No,Electronic Check,6,1
+CUST-1009,29,18,45.80,824.40,Month-to-Month,Yes,Credit Card,2,0
+CUST-1010,49,36,70.15,2525.40,One Year,No,Bank Transfer,1,0
+CUST-1011,35,4,88.40,353.60,Month-to-Month,No,Electronic Check,4,1
+CUST-1012,62,55,105.75,5816.25,Two Year,Yes,Credit Card,0,0
+CUST-1013,24,10,50.30,503.00,Month-to-Month,No,Electronic Check,2,1
+CUST-1014,41,42,62.90,2641.80,One Year,Yes,Bank Transfer,0,0
+CUST-1015,57,1,85.10,85.10,Month-to-Month,No,Electronic Check,3,1
+CUST-1016,33,28,95.40,2671.20,One Year,Yes,Credit Card,1,0
+CUST-1017,47,64,115.80,7411.20,Two Year,Yes,Credit Card,0,0
+CUST-1018,22,6,30.50,183.00,Month-to-Month,No,Bank Transfer,1,0
+CUST-1019,53,15,92.65,1389.75,Month-to-Month,No,Electronic Check,5,1
+CUST-1020,39,50,75.40,3770.00,Two Year,Yes,Bank Transfer,0,0

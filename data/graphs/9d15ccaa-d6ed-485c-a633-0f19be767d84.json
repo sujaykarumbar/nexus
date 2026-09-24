@@ -1,0 +1,419 @@
+{
+  "project_id": "9d15ccaa-d6ed-485c-a633-0f19be767d84",
+  "nodes": [
+    {
+      "id": "ds_33ed9605-937f-4dd7-8ae1-debbeeca64bf",
+      "name": "Customer Churn Intelligence Dataset",
+      "node_type": "dataset",
+      "properties": {
+        "dataset_id": "33ed9605-937f-4dd7-8ae1-debbeeca64bf",
+        "row_count": 20,
+        "column_count": 10,
+        "columns": [
+          "customer_id",
+          "age",
+          "tenure_months",
+          "monthly_charges",
+          "total_charges",
+          "contract_type",
+          "tech_support",
+          "payment_method",
+          "num_tickets",
+          "churn"
+        ]
+      },
+      "project_id": "9d15ccaa-d6ed-485c-a633-0f19be767d84"
+    },
+    {
+      "id": "col_33ed9605-937f-4dd7-8ae1-debbeeca64bf_customer_id",
+      "name": "customer_id",
+      "node_type": "column",
+      "properties": {
+        "column_name": "customer_id",
+        "dataset_id": "33ed9605-937f-4dd7-8ae1-debbeeca64bf",
+        "inferred_type": "IDENTIFIER",
+        "data_type": "object",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 20
+      },
+      "project_id": "9d15ccaa-d6ed-485c-a633-0f19be767d84"
+    },
+    {
+      "id": "col_33ed9605-937f-4dd7-8ae1-debbeeca64bf_age",
+      "name": "age",
+      "node_type": "column",
+      "properties": {
+        "column_name": "age",
+        "dataset_id": "33ed9605-937f-4dd7-8ae1-debbeeca64bf",
+        "inferred_type": "NUMERICAL",
+        "data_type": "object",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 20
+      },
+      "project_id": "9d15ccaa-d6ed-485c-a633-0f19be767d84"
+    },
+    {
+      "id": "col_33ed9605-937f-4dd7-8ae1-debbeeca64bf_tenure_months",
+      "name": "tenure_months",
+      "node_type": "column",
+      "properties": {
+        "column_name": "tenure_months",
+        "dataset_id": "33ed9605-937f-4dd7-8ae1-debbeeca64bf",
+        "inferred_type": "NUMERICAL",
+        "data_type": "object",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 20
+      },
+      "project_id": "9d15ccaa-d6ed-485c-a633-0f19be767d84"
+    },
+    {
+      "id": "col_33ed9605-937f-4dd7-8ae1-debbeeca64bf_monthly_charges",
+      "name": "monthly_charges",
+      "node_type": "column",
+      "properties": {
+        "column_name": "monthly_charges",
+        "dataset_id": "33ed9605-937f-4dd7-8ae1-debbeeca64bf",
+        "inferred_type": "NUMERICAL",
+        "data_type": "object",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 20
+      },
+      "project_id": "9d15ccaa-d6ed-485c-a633-0f19be767d84"
+    },
+    {
+      "id": "col_33ed9605-937f-4dd7-8ae1-debbeeca64bf_total_charges",
+      "name": "total_charges",
+      "node_type": "column",
+      "properties": {
+        "column_name": "total_charges",
+        "dataset_id": "33ed9605-937f-4dd7-8ae1-debbeeca64bf",
+        "inferred_type": "NUMERICAL",
+        "data_type": "object",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 20
+      },
+      "project_id": "9d15ccaa-d6ed-485c-a633-0f19be767d84"
+    },
+    {
+      "id": "col_33ed9605-937f-4dd7-8ae1-debbeeca64bf_contract_type",
+      "name": "contract_type",
+      "node_type": "column",
+      "properties": {
+        "column_name": "contract_type",
+        "dataset_id": "33ed9605-937f-4dd7-8ae1-debbeeca64bf",
+        "inferred_type": "CATEGORICAL",
+        "data_type": "object",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 3
+      },
+      "project_id": "9d15ccaa-d6ed-485c-a633-0f19be767d84"
+    },
+    {
+      "id": "col_33ed9605-937f-4dd7-8ae1-debbeeca64bf_tech_support",
+      "name": "tech_support",
+      "node_type": "column",
+      "properties": {
+        "column_name": "tech_support",
+        "dataset_id": "33ed9605-937f-4dd7-8ae1-debbeeca64bf",
+        "inferred_type": "BOOLEAN",
+        "data_type": "object",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 2
+      },
+      "project_id": "9d15ccaa-d6ed-485c-a633-0f19be767d84"
+    },
+    {
+      "id": "col_33ed9605-937f-4dd7-8ae1-debbeeca64bf_payment_method",
+      "name": "payment_method",
+      "node_type": "column",
+      "properties": {
+        "column_name": "payment_method",
+        "dataset_id": "33ed9605-937f-4dd7-8ae1-debbeeca64bf",
+        "inferred_type": "CATEGORICAL",
+        "data_type": "object",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 3
+      },
+      "project_id": "9d15ccaa-d6ed-485c-a633-0f19be767d84"
+    },
+    {
+      "id": "col_33ed9605-937f-4dd7-8ae1-debbeeca64bf_num_tickets",
+      "name": "num_tickets",
+      "node_type": "column",
+      "properties": {
+        "column_name": "num_tickets",
+        "dataset_id": "33ed9605-937f-4dd7-8ae1-debbeeca64bf",
+        "inferred_type": "NUMERICAL",
+        "data_type": "object",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 7
+      },
+      "project_id": "9d15ccaa-d6ed-485c-a633-0f19be767d84"
+    },
+    {
+      "id": "col_33ed9605-937f-4dd7-8ae1-debbeeca64bf_churn",
+      "name": "churn",
+      "node_type": "column",
+      "properties": {
+        "column_name": "churn",
+        "dataset_id": "33ed9605-937f-4dd7-8ae1-debbeeca64bf",
+        "inferred_type": "BOOLEAN",
+        "data_type": "object",
+        "null_count": 0,
+        "null_percentage": 0.0,
+        "unique_count": 2
+      },
+      "project_id": "9d15ccaa-d6ed-485c-a633-0f19be767d84"
+    },
+    {
+      "id": "prob_33ed9605-937f-4dd7-8ae1-debbeeca64bf_churn",
+      "name": "Binary Classification: churn",
+      "node_type": "problem",
+      "properties": {
+        "problem_type": "binary_classification",
+        "target_column": "churn",
+        "dataset_id": "33ed9605-937f-4dd7-8ae1-debbeeca64bf"
+      },
+      "project_id": "9d15ccaa-d6ed-485c-a633-0f19be767d84"
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge_has_col_33ed9605-937f-4dd7-8ae1-debbeeca64bf_customer_id",
+      "source_id": "ds_33ed9605-937f-4dd7-8ae1-debbeeca64bf",
+      "target_id": "col_33ed9605-937f-4dd7-8ae1-debbeeca64bf_customer_id",
+      "relation": "HAS_COLUMN",
+      "weight": 1.0,
+      "properties": {
+        "column_name": "customer_id"
+      }
+    },
+    {
+      "id": "edge_has_col_33ed9605-937f-4dd7-8ae1-debbeeca64bf_age",
+      "source_id": "ds_33ed9605-937f-4dd7-8ae1-debbeeca64bf",
+      "target_id": "col_33ed9605-937f-4dd7-8ae1-debbeeca64bf_age",
+      "relation": "HAS_COLUMN",
+      "weight": 1.0,
+      "properties": {
+        "column_name": "age"
+      }
+    },
+    {
+      "id": "edge_has_col_33ed9605-937f-4dd7-8ae1-debbeeca64bf_tenure_months",
+      "source_id": "ds_33ed9605-937f-4dd7-8ae1-debbeeca64bf",
+      "target_id": "col_33ed9605-937f-4dd7-8ae1-debbeeca64bf_tenure_months",
+      "relation": "HAS_COLUMN",
+      "weight": 1.0,
+      "properties": {
+        "column_name": "tenure_months"
+      }
+    },
+    {
+      "id": "edge_has_col_33ed9605-937f-4dd7-8ae1-debbeeca64bf_monthly_charges",
+      "source_id": "ds_33ed9605-937f-4dd7-8ae1-debbeeca64bf",
+      "target_id": "col_33ed9605-937f-4dd7-8ae1-debbeeca64bf_monthly_charges",
+      "relation": "HAS_COLUMN",
+      "weight": 1.0,
+      "properties": {
+        "column_name": "monthly_charges"
+      }
+    },
+    {
+      "id": "edge_has_col_33ed9605-937f-4dd7-8ae1-debbeeca64bf_total_charges",
+      "source_id": "ds_33ed9605-937f-4dd7-8ae1-debbeeca64bf",
+      "target_id": "col_33ed9605-937f-4dd7-8ae1-debbeeca64bf_total_charges",
+      "relation": "HAS_COLUMN",
+      "weight": 1.0,
+      "properties": {
+        "column_name": "total_charges"
+      }
+    },
+    {
+      "id": "edge_has_col_33ed9605-937f-4dd7-8ae1-debbeeca64bf_contract_type",
+      "source_id": "ds_33ed9605-937f-4dd7-8ae1-debbeeca64bf",
+      "target_id": "col_33ed9605-937f-4dd7-8ae1-debbeeca64bf_contract_type",
+      "relation": "HAS_COLUMN",
+      "weight": 1.0,
+      "properties": {
+        "column_name": "contract_type"
+      }
+    },
+    {
+      "id": "edge_has_col_33ed9605-937f-4dd7-8ae1-debbeeca64bf_tech_support",
+      "source_id": "ds_33ed9605-937f-4dd7-8ae1-debbeeca64bf",
+      "target_id": "col_33ed9605-937f-4dd7-8ae1-debbeeca64bf_tech_support",
+      "relation": "HAS_COLUMN",
+      "weight": 1.0,
+      "properties": {
+        "column_name": "tech_support"
+      }
+    },
+    {
+      "id": "edge_has_col_33ed9605-937f-4dd7-8ae1-debbeeca64bf_payment_method",
+      "source_id": "ds_33ed9605-937f-4dd7-8ae1-debbeeca64bf",
+      "target_id": "col_33ed9605-937f-4dd7-8ae1-debbeeca64bf_payment_method",
+      "relation": "HAS_COLUMN",
+      "weight": 1.0,
+      "properties": {
+        "column_name": "payment_method"
+      }
+    },
+    {
+      "id": "edge_has_col_33ed9605-937f-4dd7-8ae1-debbeeca64bf_num_tickets",
+      "source_id": "ds_33ed9605-937f-4dd7-8ae1-debbeeca64bf",
+      "target_id": "col_33ed9605-937f-4dd7-8ae1-debbeeca64bf_num_tickets",
+      "relation": "HAS_COLUMN",
+      "weight": 1.0,
+      "properties": {
+        "column_name": "num_tickets"
+      }
+    },
+    {
+      "id": "edge_has_col_33ed9605-937f-4dd7-8ae1-debbeeca64bf_churn",
+      "source_id": "ds_33ed9605-937f-4dd7-8ae1-debbeeca64bf",
+      "target_id": "col_33ed9605-937f-4dd7-8ae1-debbeeca64bf_churn",
+      "relation": "HAS_COLUMN",
+      "weight": 1.0,
+      "properties": {
+        "column_name": "churn"
+      }
+    },
+    {
+      "id": "edge_corr_33ed9605-937f-4dd7-8ae1-debbeeca64bf_age_monthly_charges",
+      "source_id": "col_33ed9605-937f-4dd7-8ae1-debbeeca64bf_age",
+      "target_id": "col_33ed9605-937f-4dd7-8ae1-debbeeca64bf_monthly_charges",
+      "relation": "CORRELATES_WITH",
+      "weight": 0.669,
+      "properties": {
+        "correlation_r": 0.669,
+        "strength": "moderate"
+      }
+    },
+    {
+      "id": "edge_corr_33ed9605-937f-4dd7-8ae1-debbeeca64bf_age_num_tickets",
+      "source_id": "col_33ed9605-937f-4dd7-8ae1-debbeeca64bf_age",
+      "target_id": "col_33ed9605-937f-4dd7-8ae1-debbeeca64bf_num_tickets",
+      "relation": "CORRELATES_WITH",
+      "weight": 0.425,
+      "properties": {
+        "correlation_r": 0.425,
+        "strength": "moderate"
+      }
+    },
+    {
+      "id": "edge_corr_33ed9605-937f-4dd7-8ae1-debbeeca64bf_age_churn",
+      "source_id": "col_33ed9605-937f-4dd7-8ae1-debbeeca64bf_age",
+      "target_id": "col_33ed9605-937f-4dd7-8ae1-debbeeca64bf_churn",
+      "relation": "CORRELATES_WITH",
+      "weight": 0.381,
+      "properties": {
+        "correlation_r": 0.381,
+        "strength": "weak"
+      }
+    },
+    {
+      "id": "edge_corr_33ed9605-937f-4dd7-8ae1-debbeeca64bf_tenure_months_total_charges",
+      "source_id": "col_33ed9605-937f-4dd7-8ae1-debbeeca64bf_tenure_months",
+      "target_id": "col_33ed9605-937f-4dd7-8ae1-debbeeca64bf_total_charges",
+      "relation": "CORRELATES_WITH",
+      "weight": 0.888,
+      "properties": {
+        "correlation_r": 0.888,
+        "strength": "strong"
+      }
+    },
+    {
+      "id": "edge_corr_33ed9605-937f-4dd7-8ae1-debbeeca64bf_num_tickets_tenure_months",
+      "source_id": "col_33ed9605-937f-4dd7-8ae1-debbeeca64bf_num_tickets",
+      "target_id": "col_33ed9605-937f-4dd7-8ae1-debbeeca64bf_tenure_months",
+      "relation": "CORRELATES_WITH",
+      "weight": 0.773,
+      "properties": {
+        "correlation_r": -0.773,
+        "strength": "strong"
+      }
+    },
+    {
+      "id": "edge_corr_33ed9605-937f-4dd7-8ae1-debbeeca64bf_churn_tenure_months",
+      "source_id": "col_33ed9605-937f-4dd7-8ae1-debbeeca64bf_churn",
+      "target_id": "col_33ed9605-937f-4dd7-8ae1-debbeeca64bf_tenure_months",
+      "relation": "CORRELATES_WITH",
+      "weight": 0.755,
+      "properties": {
+        "correlation_r": -0.755,
+        "strength": "strong"
+      }
+    },
+    {
+      "id": "edge_corr_33ed9605-937f-4dd7-8ae1-debbeeca64bf_monthly_charges_total_charges",
+      "source_id": "col_33ed9605-937f-4dd7-8ae1-debbeeca64bf_monthly_charges",
+      "target_id": "col_33ed9605-937f-4dd7-8ae1-debbeeca64bf_total_charges",
+      "relation": "CORRELATES_WITH",
+      "weight": 0.532,
+      "properties": {
+        "correlation_r": 0.532,
+        "strength": "moderate"
+      }
+    },
+    {
+      "id": "edge_corr_33ed9605-937f-4dd7-8ae1-debbeeca64bf_num_tickets_total_charges",
+      "source_id": "col_33ed9605-937f-4dd7-8ae1-debbeeca64bf_num_tickets",
+      "target_id": "col_33ed9605-937f-4dd7-8ae1-debbeeca64bf_total_charges",
+      "relation": "CORRELATES_WITH",
+      "weight": 0.568,
+      "properties": {
+        "correlation_r": -0.568,
+        "strength": "moderate"
+      }
+    },
+    {
+      "id": "edge_corr_33ed9605-937f-4dd7-8ae1-debbeeca64bf_churn_total_charges",
+      "source_id": "col_33ed9605-937f-4dd7-8ae1-debbeeca64bf_churn",
+      "target_id": "col_33ed9605-937f-4dd7-8ae1-debbeeca64bf_total_charges",
+      "relation": "CORRELATES_WITH",
+      "weight": 0.568,
+      "properties": {
+        "correlation_r": -0.568,
+        "strength": "moderate"
+      }
+    },
+    {
+      "id": "edge_corr_33ed9605-937f-4dd7-8ae1-debbeeca64bf_churn_num_tickets",
+      "source_id": "col_33ed9605-937f-4dd7-8ae1-debbeeca64bf_churn",
+      "target_id": "col_33ed9605-937f-4dd7-8ae1-debbeeca64bf_num_tickets",
+      "relation": "CORRELATES_WITH",
+      "weight": 0.876,
+      "properties": {
+        "correlation_r": 0.876,
+        "strength": "strong"
+      }
+    },
+    {
+      "id": "edge_target_33ed9605-937f-4dd7-8ae1-debbeeca64bf_churn",
+      "source_id": "col_33ed9605-937f-4dd7-8ae1-debbeeca64bf_churn",
+      "target_id": "prob_33ed9605-937f-4dd7-8ae1-debbeeca64bf_churn",
+      "relation": "TARGET_OF",
+      "weight": 1.0,
+      "properties": {
+        "target_column": "churn"
+      }
+    },
+    {
+      "id": "edge_prob_ds_33ed9605-937f-4dd7-8ae1-debbeeca64bf_churn",
+      "source_id": "prob_33ed9605-937f-4dd7-8ae1-debbeeca64bf_churn",
+      "target_id": "ds_33ed9605-937f-4dd7-8ae1-debbeeca64bf",
+      "relation": "BELONGS_TO",
+      "weight": 1.0,
+      "properties": {}
+    }
+  ]
+}
