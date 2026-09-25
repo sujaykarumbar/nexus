@@ -18,6 +18,7 @@ from apps.api.routes import (
     rag_router,
     graph_router,
     streaming_router,
+    mlops_router,
 )
 
 
@@ -70,6 +71,7 @@ app.include_router(anomalies_router, prefix=settings.API_V1_STR)
 app.include_router(rag_router, prefix=settings.API_V1_STR)
 app.include_router(graph_router, prefix=settings.API_V1_STR)
 app.include_router(streaming_router, prefix=settings.API_V1_STR)
+app.include_router(mlops_router, prefix=settings.API_V1_STR)
 
 
 @app.get("/", tags=["Root"])

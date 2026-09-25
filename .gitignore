@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+.pytest_cache/
+.coverage
+htmlcov/
+*.egg-info/
+
+# Environments
+.env
+.venv
+venv/
+env/
+
+# Databases
+*.db
+*.sqlite
+*.sqlite3
+nexus.db
+
+# Generated data artifacts
+data/models/*.joblib
+data/graphs/*.json
+data/uploads/*
+!data/uploads/.gitkeep
+!data/models/.gitkeep
+!data/graphs/.gitkeep
+
+# Frontend & Node
+node_modules/
+apps/web/node_modules/
+apps/web/dist/
+.vite/
+apps/web/node_modules/.vite/
+
+# System & IDE
+.DS_Store
+Thumbs.db

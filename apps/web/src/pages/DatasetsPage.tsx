@@ -32,7 +32,6 @@ import {
   Trash2,
   PieChart
 } from 'lucide-react';
-import { SampleDatasetModal } from '../components/dashboard/SampleDatasetModal';
 import { UploadDatasetModal } from '../components/datasets/UploadDatasetModal';
 
 export const DatasetsPage: React.FC = () => {
@@ -53,7 +52,6 @@ export const DatasetsPage: React.FC = () => {
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [isDetailLoading, setIsDetailLoading] = useState<boolean>(false);
   const [isAnalyzing, setIsAnalyzing] = useState<boolean>(false);
-  const [isSampleModalOpen, setIsSampleModalOpen] = useState<boolean>(false);
   const [isUploadModalOpen, setIsUploadModalOpen] = useState<boolean>(false);
   const [columnSearch, setColumnSearch] = useState<string>('');
   const [statusMessage, setStatusMessage] = useState<string | null>(null);
@@ -187,13 +185,6 @@ export const DatasetsPage: React.FC = () => {
 
         <div className="flex items-center flex-wrap gap-2.5 shrink-0">
           <button
-            onClick={() => setIsSampleModalOpen(true)}
-            className="px-3.5 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold border border-slate-700 hover:border-slate-600 transition-all flex items-center space-x-2"
-          >
-            <Sparkles className="w-3.5 h-3.5 text-nexus-accent" />
-            <span>Sample Datasets</span>
-          </button>
-          <button
             onClick={() => setIsUploadModalOpen(true)}
             className="px-4 py-2 rounded-xl bg-gradient-to-r from-nexus-accent to-nexus-purple text-white text-xs font-semibold hover:opacity-95 transition-opacity shadow-glow flex items-center space-x-2"
           >
@@ -217,19 +208,13 @@ export const DatasetsPage: React.FC = () => {
           <div className="space-y-1">
             <h3 className="text-base font-semibold text-white">No Datasets Ingested Yet</h3>
             <p className="text-xs text-slate-400 max-w-md mx-auto">
-              Load one of the bundled benchmark datasets or upload your own CSV, Excel, JSON, or Parquet file.
+              Upload your CSV, Excel, JSON, or Parquet file to begin deterministic profiling, automated data quality scoring, and ML analytics.
             </p>
           </div>
           <div className="flex justify-center space-x-3">
             <button
-              onClick={() => setIsSampleModalOpen(true)}
-              className="px-4 py-2 bg-nexus-accent text-white text-xs font-semibold rounded-xl"
-            >
-              Load Sample Dataset
-            </button>
-            <button
               onClick={() => setIsUploadModalOpen(true)}
-              className="px-4 py-2 bg-slate-800 text-slate-200 text-xs font-semibold rounded-xl"
+              className="px-4 py-2 bg-gradient-to-r from-nexus-accent to-nexus-purple text-white text-xs font-semibold rounded-xl shadow-glow"
             >
               Upload Custom File
             </button>
@@ -875,14 +860,6 @@ export const DatasetsPage: React.FC = () => {
       )}
 
       {/* Modals */}
-      <SampleDatasetModal
-        isOpen={isSampleModalOpen}
-        onClose={() => setIsSampleModalOpen(false)}
-        projects={projects}
-        onDatasetLoaded={loadInitialData}
-        onProjectCreated={(newProj) => setProjects(prev => [newProj, ...prev])}
-      />
-
       <UploadDatasetModal
         isOpen={isUploadModalOpen}
         onClose={() => setIsUploadModalOpen(false)}

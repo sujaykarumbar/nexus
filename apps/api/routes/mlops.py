@@ -72,14 +72,14 @@ def register_model_version(
 
     if ml_model:
         model_type = "automl"
-        algorithm = ml_model.best_model_name or "unknown"
-        metrics = ml_model.metrics or {}
+        algorithm = getattr(ml_model, "algorithm", None) or getattr(ml_model, "best_model_name", "unknown")
+        metrics = getattr(ml_model, "all_metrics", None) or getattr(ml_model, "metrics", {})
         dataset_id = ml_model.dataset_id
         artifact_path = ml_model.artifact_path
     else:
         model_type = "forecast"
-        algorithm = forecast_model.best_model_name or "unknown"
-        metrics = forecast_model.metrics or {}
+        algorithm = getattr(forecast_model, "algorithm", None) or getattr(forecast_model, "best_model_name", "unknown")
+        metrics = getattr(forecast_model, "all_metrics", None) or getattr(forecast_model, "metrics", {})
         dataset_id = forecast_model.dataset_id
         artifact_path = forecast_model.artifact_path
 

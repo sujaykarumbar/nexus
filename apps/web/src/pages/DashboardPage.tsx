@@ -18,7 +18,7 @@ import {
 import { SystemTelemetryCard } from '../components/dashboard/SystemTelemetryCard';
 import { AgentSwarmCard } from '../components/dashboard/AgentSwarmCard';
 import { JobQueueCard } from '../components/dashboard/JobQueueCard';
-import { SampleDatasetModal } from '../components/dashboard/SampleDatasetModal';
+import { UploadDatasetModal } from '../components/datasets/UploadDatasetModal';
 
 export const DashboardPage: React.FC = () => {
   const [projects, setProjects] = useState<Project[]>([]);
@@ -27,7 +27,7 @@ export const DashboardPage: React.FC = () => {
   const [agents, setAgents] = useState<AgentInfo[]>([]);
   const [health, setHealth] = useState<SystemHealth | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(true);
-  const [isSampleModalOpen, setIsSampleModalOpen] = useState<boolean>(false);
+  const [isUploadModalOpen, setIsUploadModalOpen] = useState<boolean>(false);
   const [selectedDatasetForJob, setSelectedDatasetForJob] = useState<Dataset | null>(null);
   const [jobNotice, setJobNotice] = useState<string | null>(null);
 
@@ -84,7 +84,7 @@ export const DashboardPage: React.FC = () => {
         <div className="space-y-1">
           <div className="flex items-center space-x-2">
             <span className="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-nexus-accent/20 text-nexus-accent border border-nexus-accent/40">
-              PHASE 1 FOUNDATION ONLINE
+              NEXUS PLATFORM ACTIVE
             </span>
             <span className="text-xs text-slate-400 font-mono">FastAPI • PostgreSQL • React</span>
           </div>
@@ -98,11 +98,11 @@ export const DashboardPage: React.FC = () => {
 
         <div className="flex items-center space-x-3 shrink-0">
           <button
-            onClick={() => setIsSampleModalOpen(true)}
+            onClick={() => setIsUploadModalOpen(true)}
             className="px-4 py-2.5 rounded-xl bg-gradient-to-r from-nexus-accent to-nexus-purple text-nexus-900 font-bold text-xs shadow-glow hover:opacity-90 transition-opacity flex items-center space-x-2"
           >
-            <Sparkles className="w-4 h-4" />
-            <span>Ingest Benchmark Dataset</span>
+            <Upload className="w-4 h-4" />
+            <span>Upload Dataset</span>
           </button>
         </div>
       </div>
@@ -188,7 +188,7 @@ export const DashboardPage: React.FC = () => {
             </div>
           </div>
           <button
-            onClick={() => setIsSampleModalOpen(true)}
+            onClick={() => setIsUploadModalOpen(true)}
             className="px-3 py-1.5 rounded-lg bg-slate-800 border border-slate-700 hover:bg-slate-700 text-xs font-semibold text-slate-200 transition-colors flex items-center space-x-1.5"
           >
             <Plus className="w-3.5 h-3.5" />
@@ -202,14 +202,14 @@ export const DashboardPage: React.FC = () => {
             <div>
               <p className="text-xs font-semibold text-slate-300">No Datasets Ingested Yet</p>
               <p className="text-[11px] text-slate-400 mt-0.5">
-                Load a benchmark dataset (Churn, Sales Forecast, Sensor Anomalies) to begin.
+                Upload a CSV, Excel, JSON, or Parquet dataset to begin autonomous analysis.
               </p>
             </div>
             <button
-              onClick={() => setIsSampleModalOpen(true)}
+              onClick={() => setIsUploadModalOpen(true)}
               className="px-4 py-2 rounded-xl bg-slate-800 border border-slate-700 text-nexus-accent text-xs font-bold hover:bg-slate-700 transition-colors"
             >
-              Load Sample Dataset
+              Upload Custom Dataset
             </button>
           </div>
         ) : (
@@ -276,12 +276,12 @@ export const DashboardPage: React.FC = () => {
       {/* Multi-Agent Swarm Registry */}
       <AgentSwarmCard agents={agents} />
 
-      {/* Sample Dataset Modal */}
-      <SampleDatasetModal
-        isOpen={isSampleModalOpen}
-        onClose={() => setIsSampleModalOpen(false)}
+      {/* Upload Dataset Modal */}
+      <UploadDatasetModal
+        isOpen={isUploadModalOpen}
+        onClose={() => setIsUploadModalOpen(false)}
         projects={projects}
-        onDatasetLoaded={refreshData}
+        onDatasetUploaded={refreshData}
         onProjectCreated={(newProj) => setProjects(prev => [newProj, ...prev])}
       />
     </div>

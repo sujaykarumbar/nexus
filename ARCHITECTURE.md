@@ -38,12 +38,31 @@ RAW DATA ──► PROFILING ──► DATA QUALITY ──► AUTOML / FORECAST 
   * **Research / RAG Agent**: Document retrieval and chunk citation grounding.
   * **Critic Agent**: Strict gatekeeper that mathematically validates all claims against raw computed metrics.
   * **Recommendation Agent**: Formulates decision actions with quantified risk bounds.
-  * **Report Agent**: Compiles executive HTML/PDF analytical dossiers.
+  * **Report Agent**: Compiles executive analytical dossiers.
 
 ### Machine Learning & Data Engines (`services/ml`)
 * **AutoML Engine**: Trains and compares Logistic/Linear Regression, Random Forest, XGBoost, LightGBM, SVM, and Neural Networks across 5-fold cross-validation.
 * **Evaluation Matrix**: Multi-metric evaluation (Accuracy, F1, Precision, Recall, ROC-AUC, PR-AUC for classification; MAE, MSE, RMSE, R², MAPE for regression).
 * **Explainability**: SHAP (SHapley Additive exPlanations) values computed from trained models to generate transparent feature importance scores.
+
+### Knowledge Graph & GraphRAG Engine (`services/graph`)
+* **Graph Extraction**: Dynamic construction of property graph representation from tabular schemas, statistical correlations, and model dependencies.
+* **Multi-Hop Traversal**: BFS and semantic neighborhood querying to surface hidden co-dependencies and entity relationships.
+* **Grounded Retrieval**: Context-augmented graph query engine ensuring all responses are anchored to entity nodes and verified edges.
+
+### Real-Time Streaming & Live Telemetry Engine (`services/streaming`)
+* **In-Memory Pub/Sub Event Bus**: High-throughput async event distribution supporting dynamic topic routing and multi-subscriber broadcast.
+* **Online Statistical Anomaly Detector**: Real-time sliding window outlier detection computing Welford z-scores, quantile deviations, and severity levels.
+* **Data Stream Simulator**: Async event generator capable of replaying datasets with parameterized throughput, synthetic drift injection, and anomaly spikes.
+
+### MLOps Governance & Drift Engine (`services/mlops`)
+* **Model Version Registry**: Complete immutable snapshotting of model versions, parent-child lineage traversal, SHA-256 dataset fingerprinting, and lifecycle state management (Candidate -> Staging -> Production -> Archived).
+* **Data Drift Detection**: Population Stability Index (PSI) and two-sample Kolmogorov-Smirnov (KS) tests to detect feature-level distribution shifts between training and serving datasets.
+* **Pipeline Scheduler**: Declarative cron-driven automated retraining pipeline scheduler with run history and manual trigger execution.
+
+### Observability & Executive Reporting (`services/observability`, `apps/web/src/pages/ReportsPage.tsx`)
+* **Deep System Diagnostics**: Real-time CPU, RAM, disk, event loop latency, and connection pool telemetry.
+* **Executive Intelligence Dossiers**: 360° cross-module synthesis producing deterministic executive briefings with zero-hallucination verification badges and markdown/PDF export.
 
 ---
 

@@ -10,6 +10,7 @@ from .anomalies import router as anomalies_router
 from .rag import router as rag_router
 from .graph import router as graph_router
 from .streaming import router as streaming_router
+from .mlops import router as mlops_router
 
 __all__ = [
     "auth_router",
@@ -24,5 +25,6 @@ __all__ = [
     "rag_router",
     "graph_router",
     "streaming_router",
+    "mlops_router",
 ]
 

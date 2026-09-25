@@ -141,20 +141,20 @@ class DriftDetector:
             )
 
             level = _drift_level(psi, ks_p)
-            alert = psi >= cls.PSI_ALERT_THRESHOLD or ks_p <= cls.KS_P_ALERT_THRESHOLD
+            alert = bool(psi >= cls.PSI_ALERT_THRESHOLD or ks_p <= cls.KS_P_ALERT_THRESHOLD)
 
             fd = FeatureDrift(
                 feature=col,
-                psi=psi,
-                ks_statistic=round(float(ks_stat), 4),
-                ks_p_value=round(float(ks_p), 4),
-                ref_mean=round(ref_mean, 4),
-                cur_mean=round(cur_mean, 4),
-                ref_std=round(ref_std, 4),
-                cur_std=round(cur_std, 4),
-                mean_shift_pct=mean_shift_pct,
-                drift_level=level,
-                alert=alert,
+                psi=float(psi),
+                ks_statistic=float(round(float(ks_stat), 4)),
+                ks_p_value=float(round(float(ks_p), 4)),
+                ref_mean=float(round(ref_mean, 4)),
+                cur_mean=float(round(cur_mean, 4)),
+                ref_std=float(round(ref_std, 4)),
+                cur_std=float(round(cur_std, 4)),
+                mean_shift_pct=float(mean_shift_pct),
+                drift_level=str(level),
+                alert=bool(alert),
             )
             feature_drifts.append(fd)
             if alert:
@@ -162,9 +162,9 @@ class DriftDetector:
             else:
                 stable.append(col)
 
-        overall_psi = round(
+        overall_psi = float(round(
             float(np.mean([f.psi for f in feature_drifts])) if feature_drifts else 0.0, 4
-        )
+        ))
 
         if overall_psi < 0.1 and not drifted:
             overall_level = "none"
@@ -175,7 +175,7 @@ class DriftDetector:
         else:
             overall_level = "major"
 
-        global_alert = len(drifted) > 0
+        global_alert = bool(len(drifted) > 0)
 
         if not global_alert:
             recommendation = "No significant drift detected. Current model remains valid."

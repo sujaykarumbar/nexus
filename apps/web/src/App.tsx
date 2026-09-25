@@ -13,6 +13,7 @@ import { KnowledgeGraphPage } from './pages/KnowledgeGraphPage';
 import { StreamingPage } from './pages/StreamingPage';
 import { MLOpsPage } from './pages/MLOpsPage';
 import { ObservabilityPage } from './pages/ObservabilityPage';
+import { ReportsPage } from './pages/ReportsPage';
 import { LoginPage } from './pages/LoginPage';
 import { RegisterPage } from './pages/RegisterPage';
 import { api } from './services/api';
@@ -81,7 +82,8 @@ const MainLayout: React.FC = () => {
           {activeTab === 'streaming' && <StreamingPage />}
           {activeTab === 'mlops' && <MLOpsPage />}
           {activeTab === 'observability' && <ObservabilityPage />}
-          {activeTab !== 'dashboard' && activeTab !== 'datasets' && activeTab !== 'agents' && activeTab !== 'automl' && activeTab !== 'forecasting' && activeTab !== 'anomalies' && activeTab !== 'rag' && activeTab !== 'graph' && activeTab !== 'streaming' && activeTab !== 'mlops' && activeTab !== 'observability' && (
+          {activeTab === 'reports' && <ReportsPage />}
+          {activeTab !== 'dashboard' && activeTab !== 'datasets' && activeTab !== 'agents' && activeTab !== 'automl' && activeTab !== 'forecasting' && activeTab !== 'anomalies' && activeTab !== 'rag' && activeTab !== 'graph' && activeTab !== 'streaming' && activeTab !== 'mlops' && activeTab !== 'observability' && activeTab !== 'reports' && (
             <div className="glass-panel p-12 rounded-2xl border-slate-800 text-center space-y-3 max-w-2xl mx-auto my-12">
               <div className="inline-block px-3 py-1 rounded-full text-xs font-mono bg-nexus-accent/10 text-nexus-accent border border-nexus-accent/30">
                 MODULE SCHEDULED FOR NEXT MILESTONE

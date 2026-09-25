@@ -65,7 +65,8 @@ class DataStreamSimulator:
         self._col_stds: Dict[str, float] = {}
         for col in self._numeric_cols:
             series = pd.to_numeric(df[col], errors="coerce").dropna()
-            self._col_stds[col] = float(series.std()) if len(series) > 1 else 1.0
+            val_std = float(series.std()) if len(series) > 1 else 1.0
+            self._col_stds[col] = val_std if (not np.isnan(val_std) and val_std > 1e-6) else 1.0
 
         self.records_emitted = 0
         self.spikes_injected = 0

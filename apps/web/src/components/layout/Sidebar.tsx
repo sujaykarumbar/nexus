@@ -23,18 +23,18 @@ interface SidebarProps {
 
 export const Sidebar: React.FC<SidebarProps> = ({ activeTab, setActiveTab }) => {
   const navItems = [
-    { id: 'dashboard', label: 'Command Center', icon: LayoutDashboard, badge: 'Live' },
-    { id: 'datasets', label: 'Dataset Explorer', icon: Database, badge: 'Phase 2' },
-    { id: 'agents', label: 'Multi-Agent Swarm', icon: Bot, badge: 'Phase 5 Live' },
-    { id: 'automl', label: 'AutoML & Models', icon: Cpu, badge: 'Phase 3' },
-    { id: 'forecasting', label: 'Time-Series Forecast', icon: TrendingUp, badge: 'Phase 4 Live' },
-    { id: 'anomalies', label: 'Anomaly Center', icon: AlertTriangle, badge: 'Phase 4 Live' },
-    { id: 'rag', label: 'Knowledge & RAG', icon: Network, badge: 'Phase 6 Live' },
-    { id: 'graph', label: 'Knowledge Graph', icon: GitMerge, badge: 'Phase 7 Live' },
-    { id: 'streaming', label: 'Live Monitor', icon: Radio, badge: 'Phase 8 Live' },
-    { id: 'mlops', label: 'MLOps & Registry', icon: FlaskConical, badge: 'Phase 9 Live' },
-    { id: 'observability', label: 'Observability', icon: Eye, badge: 'Phase 10 Live' },
-    { id: 'reports', label: 'Executive Reports', icon: FileText, badge: 'Dossiers' },
+    { id: 'dashboard', label: 'Command Center', icon: LayoutDashboard },
+    { id: 'datasets', label: 'Dataset Explorer', icon: Database },
+    { id: 'agents', label: 'Multi-Agent Swarm', icon: Bot },
+    { id: 'automl', label: 'AutoML & Models', icon: Cpu },
+    { id: 'forecasting', label: 'Time-Series Forecast', icon: TrendingUp },
+    { id: 'anomalies', label: 'Anomaly Center', icon: AlertTriangle },
+    { id: 'rag', label: 'Knowledge & RAG', icon: Network },
+    { id: 'graph', label: 'Knowledge Graph', icon: GitMerge },
+    { id: 'streaming', label: 'Live Monitor', icon: Radio },
+    { id: 'mlops', label: 'MLOps & Registry', icon: FlaskConical },
+    { id: 'observability', label: 'Observability', icon: Eye },
+    { id: 'reports', label: 'Executive Reports', icon: FileText },
   ];
 
   return (
@@ -52,25 +52,14 @@ export const Sidebar: React.FC<SidebarProps> = ({ activeTab, setActiveTab }) => 
                 <button
                   key={item.id}
                   onClick={() => setActiveTab(item.id)}
-                  className={`w-full flex items-center justify-between px-3 py-2.5 rounded-xl text-xs font-medium transition-all ${
+                  className={`w-full flex items-center space-x-3 px-3 py-2.5 rounded-xl text-xs font-medium transition-all ${
                     isActive
                       ? 'bg-gradient-to-r from-nexus-accent/20 to-nexus-purple/10 text-white border border-nexus-accent/30 shadow-glow'
                       : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/60'
                   }`}
                 >
-                  <div className="flex items-center space-x-3">
-                    <Icon className={`w-4 h-4 ${isActive ? 'text-nexus-accent' : 'text-slate-400'}`} />
-                    <span>{item.label}</span>
-                  </div>
-                  {item.badge && (
-                    <span className={`px-1.5 py-0.5 text-[9px] font-mono rounded ${
-                      isActive
-                        ? 'bg-nexus-accent/20 text-nexus-accent border border-nexus-accent/40'
-                        : 'bg-slate-800 text-slate-400 border border-slate-700'
-                    }`}>
-                      {item.badge}
-                    </span>
-                  )}
+                  <Icon className={`w-4 h-4 ${isActive ? 'text-nexus-accent' : 'text-slate-400'}`} />
+                  <span>{item.label}</span>
                 </button>
               );
             })}

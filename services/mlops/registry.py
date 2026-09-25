@@ -55,15 +55,17 @@ class ModelRegistry:
         self._model_index: Dict[str, List[str]] = {}
 
     @staticmethod
-    def compute_dataset_hash(file_path: str) -> str:
+    def compute_dataset_hash(file_path: Optional[str]) -> str:
         """Compute SHA-256 fingerprint of a dataset file for reproducibility tracking."""
+        if not file_path:
+            return "none"
         h = hashlib.sha256()
         try:
             with open(file_path, "rb") as f:
                 while chunk := f.read(65536):
                     h.update(chunk)
-        except (OSError, IOError):
-            h.update(file_path.encode())
+        except (OSError, IOError, TypeError):
+            h.update(str(file_path).encode())
         return h.hexdigest()[:16]
 
     def register(
@@ -73,7 +75,7 @@ class ModelRegistry:
         algorithm: str,
         metrics: Dict[str, float],
         dataset_id: str,
-        dataset_file_path: str,
+        dataset_file_path: Optional[str] = None,
         artifact_path: Optional[str] = None,
         parent_version_id: Optional[str] = None,
         tags: Optional[List[str]] = None,
