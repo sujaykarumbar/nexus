@@ -1,5 +1,11 @@
 # 🚀 NEXUS — Autonomous Multi-Agent Data Intelligence & Prediction Platform
 
+[![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.100+-009688.svg)](https://fastapi.tiangolo.com)
+[![React 18](https://img.shields.io/badge/React-18-61DAFB.svg)](https://react.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0+-3178C6.svg)](https://www.typescriptlang.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 NEXUS is an end-to-end, production-grade autonomous data intelligence and prediction platform. Acting as an **AI-powered automated data scientist**, NEXUS takes raw datasets (CSV, Excel, JSON, Parquet, streaming feeds) and autonomously executes:
 
 1. **Automated Ingestion & Schema Profiling**: Type inference, missingness mapping, cardinality and outlier analysis.
@@ -11,6 +17,21 @@ NEXUS is an end-to-end, production-grade autonomous data intelligence and predic
 7. **Critic Verification Layer**: Strict mathematical evidence checking that prevents hallucinated claims.
 8. **Decision Intelligence**: Actionable recommendations with quantified risk bounds and confidence intervals.
 9. **Interactive Command Center UI**: Modern React + TypeScript interface with dark mode, live agent execution traces, and model comparison labs.
+
+---
+
+## 🏗️ End-to-End Machine Learning Pipeline
+
+![Machine Learning Pipeline Architecture](docs/images/ml_pipeline_architecture.jpg)
+
+The NEXUS pipeline seamlessly connects every phase of the machine learning lifecycle:
+* **01. Data Ingestion**: Automated multi-format file ingestion (CSV, Excel, JSON, Parquet, streams).
+* **02. Data Preparation**: Automated cleaning, missing value imputation, type coercion, and deterministic quality validation.
+* **03. Feature Engineering**: Correlation filtering, scaling, one-hot encoding, and feature importance analysis.
+* **04. Model Training**: Multi-algorithm AutoML training across 5-fold cross-validation.
+* **05. Model Evaluation**: Comprehensive performance matrix evaluation and model selection.
+* **06. Deployment**: Automated model artifact persistence, registry management, and real-time REST inference.
+* **07. Monitoring**: Continuous telemetry tracking, PSI/KS data drift detection, and retraining alerts.
 
 ---
 
@@ -45,7 +66,68 @@ NEXUS is an end-to-end, production-grade autonomous data intelligence and predic
 
 ---
 
-## ⚡ Quick Start (Phase 1)
+## 🤖 Multi-Agent Swarm Architecture
+
+NEXUS uses a stateful directed acyclic graph (DAG) swarm built on LangGraph. Autonomous agents collaborate asynchronously through a centralized message bus, sharing context, embeddings, and artifacts with strict validation.
+
+![Agent Swarm Architecture](docs/images/agent_swarm_architecture.jpg)
+
+### Agent Roles & Responsibilities
+
+| Agent | Description | Output |
+| :--- | :--- | :--- |
+| **Swarm Coordinator** | Orchestrates workflows, delegates tasks, tracks DAG state, and aggregates outputs. | Execution Plan & Final Synthesis |
+| **Planner Agent** | Decomposes analytical objectives into structured multi-step execution graphs. | Task Execution Graph |
+| **Research / RAG Agent** | Gathers domain knowledge and document context with verifiable source citations. | Grounded Evidence Chunks |
+| **Execution Agent** | Executes computational workloads (pandas, scikit-learn, statsmodels). | Computed Statistics & Models |
+| **Validator (Critic) Agent** | Mathematically audits agent assertions against raw computed data to prevent hallucinations. | Verification Badges & Audit Logs |
+| **Memory Agent** | Manages conversation history, key-value state store, and vector embeddings. | Long-term Context & Session Cache |
+| **Routing Agent** | Dynamically routes requests, tool invocations, and service dispatches. | Service Invocations |
+
+---
+
+## 🔄 MLOps & Continuous Learning Architecture
+
+NEXUS implements full-lifecycle MLOps governance to maintain reliable models in production:
+
+![MLOps Architecture](docs/images/mlops_architecture.jpg)
+
+* **Data Layer**: Robust data ingestion, automated validation checks, and centralized feature store.
+* **Model Layer**: Experiment tracking, automated training pipelines, and versioned model registry (Candidate → Staging → Production → Archived).
+* **Deployment & Monitoring Layer**: Continuous delivery for ML models, low-latency model serving, and real-time performance telemetry.
+* **Retraining Triggers**: Automated drift-triggered retraining via Population Stability Index (PSI) and Kolmogorov-Smirnov (KS) tests.
+
+---
+
+## ⚡ Real-Time Streaming & AI Analytics Architecture
+
+For live operational streaming scenarios, NEXUS provides a high-throughput event processing architecture:
+
+![Real-Time AI Analytics Architecture](docs/images/realtime_ai_analytics.jpg)
+
+* **Data Sources**: IoT sensors, web events, REST APIs, and application logs.
+* **Stream Processing**: High-throughput message ingestion and event stream dispatch (Kafka, Flink, Pulsar, Kinesis).
+* **Analytics Engines**: Columnar and time-series analytical storage (ClickHouse, TimescaleDB, Druid).
+* **AI/ML Layer**: Feature stores, real-time model serving, and online model training.
+* **Applications**: Live telemetry dashboards, instant anomaly alerts, REST endpoints, and automated intelligence dossiers.
+
+---
+
+## ☁️ Enterprise Cloud Deployment Architecture (AWS Reference)
+
+For enterprise scale, NEXUS seamlessly integrates with cloud infrastructure:
+
+![AWS Cloud ML Training Pipeline](docs/images/aws_ml_pipeline.jpg)
+
+* **Data Prep & Cataloging**: AWS Glue ETL and SageMaker Data Wrangler with Glue Data Catalog integration.
+* **Feature Management**: S3 Data Lake and SageMaker Feature Store for managed offline/online features.
+* **Distributed Training**: SageMaker Training Jobs with S3 model artifact persistence.
+* **Evaluation Gate**: Automated evaluation jobs with Pass/Fail validation criteria and SNS alerting.
+* **Deployment Options**: Real-time SageMaker Endpoints and SageMaker Batch Transform pipelines orchestrated via SageMaker Pipelines.
+
+---
+
+## ⚡ Quick Start
 
 ### Prerequisites
 * Python 3.11+
@@ -56,6 +138,7 @@ NEXUS is an end-to-end, production-grade autonomous data intelligence and predic
 
 1. **Clone & Setup Backend**:
    ```bash
+   git clone https://github.com/sujaykarumbar/nexus.git
    cd nexus
    python -m venv venv
    # Windows:
